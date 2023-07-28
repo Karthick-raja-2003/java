@@ -1,17 +1,28 @@
 import java.util.Scanner;
-public class si
-{
-public static void main(String[] args)
-{
-float p,si,r,y;
-Scanner input=new Scanner(System.in);
-System.out.println("enter principle amount:");
-p=input.nextFloat();
-System.out.println("enter year:");
-y=input.nextInt();
-System.out.println("enter rate:");
-r=input.nextFloat();
-si=(p*y*r)/100;
-System.out.println("simple intrest:"+si);
+class interest
+{  
+    public int year,r;
+ void display(int r)
+ {
+     int p=200000,t=3;
+     int si;
+     si=p*t*r/100;
+     System.out.println(si);
+ }
+  public static void main(String[] args)
+  {
+   interest a1=new interest();
+   System.out.println("Enter the year:");
+   Scanner input=new Scanner(System.in);
+   a1.year=input.nextInt();
+   if(a1.year>=60)
+   {
+    a1.r=12;
+   }
+   else
+   {
+    a1.r=10;
+   }
+    a1.display(a1.r);
 }
 }
